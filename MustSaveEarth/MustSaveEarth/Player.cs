@@ -38,7 +38,8 @@ namespace MustSaveEarth {
         public void Update(GameTime gameTime) {
             // get user input
             HandleGamepadInput();
-            
+            HandleKeyboardInput();
+
             _velocity *= _maxSpeed;
 
             // add velocity to the current vector
@@ -47,7 +48,7 @@ namespace MustSaveEarth {
 
 
             // if theyre not on the bottom, drop them until they reach
-            if ((_position.Y + Texture.Height) < (_view.TitleSafeArea.Bottom + 200) )
+            if((_position.Y + Texture.Height) < (_view.TitleSafeArea.Bottom + 200))
                 _velocity.Y = 1;
             else
                 _velocity.Y = 0;
@@ -56,7 +57,7 @@ namespace MustSaveEarth {
 
             // clamp the player to the bounds of the viewing area
             _position.X = MathHelper.Clamp(_position.X, _view.TitleSafeArea.Left, _view.TitleSafeArea.Right - Texture.Width);
-             _position.Y = MathHelper.Clamp(_position.Y, _view.TitleSafeArea.Bottom - Texture.Height - 120, _view.TitleSafeArea.Top);
+            _position.Y = MathHelper.Clamp(_position.Y, _view.TitleSafeArea.Bottom - Texture.Height - 120, _view.TitleSafeArea.Top);
         }
 
 
@@ -70,11 +71,31 @@ namespace MustSaveEarth {
         }
 
 
+
+        /// <summary>
+        /// Handles input from the gamepad
+        /// </summary>
         public void HandleGamepadInput() {
             GamePadState gamepadState = GamePad.GetState(PlayerIndex.One);
-            if (gamepadState.IsConnected) {
+            if(gamepadState.IsConnected) {
                 _velocity.X = gamepadState.ThumbSticks.Left.X;
             }
+        }
+
+
+        public void HandleKeyboardInput() {
+            KeyboardState keyboardState = Keyboard.GetState();
+
+            if(keyboardState.IsKeyDown(Keys.A))
+                _velocity.X = -1;
+            else if(keyboardState.IsKeyDown(Keys.D))
+                _velocity.X = 1;
+            else
+                _velocity.X = 0;
+
+            if(keyboardState.IsKeyDown(Keys.Space))
+                if(ShotManager.CanFireShot())
+                    ShotManager.FireShot(this.Position);
         }
 
         #region Properties

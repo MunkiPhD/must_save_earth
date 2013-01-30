@@ -1,2 +1,4 @@
 Content\PlayerTank1.xnb
 Content\Background_1.xnb
+Content\WeaponShots.xnb
+Content\SpriteFont1.xnb

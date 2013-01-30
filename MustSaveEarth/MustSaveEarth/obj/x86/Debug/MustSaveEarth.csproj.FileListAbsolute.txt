@@ -6,3 +6,13 @@ E:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\obj\x86\Debug\M
 E:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\obj\x86\Debug\MustSaveEarth.exe
 E:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\obj\x86\Debug\MustSaveEarth.pdb
 E:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\Background_1.xnb
+C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\PlayerTank1.xnb
+C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\Background_1.xnb
+C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\MustSaveEarth.exe
+C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\MustSaveEarth.pdb
+C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\obj\x86\Debug\MustSaveEarth.exe
+C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\obj\x86\Debug\MustSaveEarth.pdb
+C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\WeaponShots.xnb
+C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\SpriteFont1.xnb
