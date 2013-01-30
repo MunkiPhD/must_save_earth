@@ -87,7 +87,7 @@ namespace MustSaveEarth {
                 if(particle.isActive)
                     particle.Draw(spriteBatch);
             }
-            spriteBatch.DrawString(_spriteFont, _shots.Count.ToString(), new Vector2(10, 10), Color.White);
+            spriteBatch.DrawString(_spriteFont, "Shot Count:" + _shots.Count.ToString(), new Vector2(10, 10), Color.White);
         }
     }
 }
