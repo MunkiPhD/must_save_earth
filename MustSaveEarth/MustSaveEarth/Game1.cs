@@ -16,9 +16,14 @@ namespace MustSaveEarth {
     public class Game1 : Microsoft.Xna.Framework.Game {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        Player _playerOne;
+        Texture2D _background; // refactor to own class
 
         public Game1() {
             graphics = new GraphicsDeviceManager(this);
+            graphics.PreferredBackBufferHeight = 900;
+            graphics.PreferredBackBufferWidth = 1600;
+            graphics.ApplyChanges();
             Content.RootDirectory = "Content";
         }
 
@@ -42,7 +47,8 @@ namespace MustSaveEarth {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
+            _background = Content.Load<Texture2D>("Background_1");
+            _playerOne = new Player(Content, GraphicsDevice.Viewport);
         }
 
         /// <summary>
@@ -63,7 +69,7 @@ namespace MustSaveEarth {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            // TODO: Add your update logic here
+            _playerOne.Update(gameTime);
 
             base.Update(gameTime);
         }
@@ -73,9 +79,12 @@ namespace MustSaveEarth {
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime) {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Black);
 
-            // TODO: Add your drawing code here
+            spriteBatch.Begin();
+            spriteBatch.Draw(_background, new Rectangle(0, 0, _background.Width, _background.Height), Color.White);
+            _playerOne.Draw(spriteBatch);
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }
