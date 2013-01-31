@@ -22,7 +22,7 @@ namespace MustSaveEarth {
         public Game1() {
             graphics = new GraphicsDeviceManager(this);
             graphics.PreferredBackBufferHeight = 900;
-            graphics.PreferredBackBufferWidth = 800;
+            graphics.PreferredBackBufferWidth = 1200;
             graphics.IsFullScreen = false;
             graphics.ApplyChanges();
             Content.RootDirectory = "Content";

@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\PlayerTank1.xnb</Output>
-      <Time>2013-01-30T09:59:06.9523572-05:00</Time>
+      <Output>E:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\PlayerTank1.xnb</Output>
+      <Time>2013-01-29T20:21:24.757209-05:00</Time>
     </Item>
     <Item>
       <Source>Background_1.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\Background_1.xnb</Output>
-      <Time>2013-01-30T09:59:06.949357-05:00</Time>
+      <Output>E:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\Background_1.xnb</Output>
+      <Time>2013-01-30T00:04:24.2382816-05:00</Time>
     </Item>
     <Item>
       <Source>WeaponShots.png</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\WeaponShots.xnb</Output>
-      <Time>2013-01-30T10:46:36.833361-05:00</Time>
+      <Output>E:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\WeaponShots.xnb</Output>
+      <Time>2013-01-30T20:05:26.6328353-05:00</Time>
     </Item>
     <Item>
       <Source>SpriteFont1.spritefont</Source>
@@ -34,8 +34,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
-      <Time>2013-01-30T10:51:12.372121-05:00</Time>
+      <Output>E:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
+      <Time>2013-01-30T20:05:26.6318353-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -43,10 +43,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarthContent\</RootDirectory>
-      <LoggerRootDirectory>C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarthContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>E:\development\games\must_save_earth\MustSaveEarth\MustSaveEarthContent\</RootDirectory>
+      <LoggerRootDirectory>E:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\</LoggerRootDirectory>
+      <IntermediateDirectory>E:\development\games\must_save_earth\MustSaveEarth\MustSaveEarthContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>E:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -75,7 +75,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2011-12-29T10:10:19.6738128-05:00</Value>
+        <Value>2011-11-24T10:25:13.6804899-05:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

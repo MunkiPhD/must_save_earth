@@ -10,7 +10,7 @@ namespace MustSaveEarth {
     static class ShotManager {
         static public Texture2D Texture;
         static private Rectangle _defaultShot;
-        static private Vector2 _defaultShotVector = new Vector2(0, -4f);
+        static private Vector2 _defaultShotVector = new Vector2(0, -10f);
         static private List<Particle> _shots = new List<Particle>();
         static private Viewport _view;
 
