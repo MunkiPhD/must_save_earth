@@ -29,6 +29,15 @@
       <Time>2013-01-30T10:46:36.833361-05:00</Time>
     </Item>
     <Item>
+      <Source>Line.png</Source>
+      <Name>Line</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\Line.xnb</Output>
+      <Time>2013-01-31T14:39:45.2731086-05:00</Time>
+    </Item>
+    <Item>
       <Source>SpriteFont1.spritefont</Source>
       <Name>SpriteFont1</Name>
       <Importer>FontDescriptionImporter</Importer>

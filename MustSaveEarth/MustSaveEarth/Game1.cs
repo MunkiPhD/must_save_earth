@@ -18,10 +18,11 @@ namespace MustSaveEarth {
         SpriteBatch spriteBatch;
         Player _playerOne;
         Texture2D _background; // refactor to own class
+        MapData _mapData;
 
         public Game1() {
             graphics = new GraphicsDeviceManager(this);
-            graphics.PreferredBackBufferHeight = 900;
+            graphics.PreferredBackBufferHeight = 800;
             graphics.PreferredBackBufferWidth = 800;
             graphics.IsFullScreen = false;
             graphics.ApplyChanges();
@@ -50,6 +51,8 @@ namespace MustSaveEarth {
 
             _background = Content.Load<Texture2D>("Background_1");
             _playerOne = new Player(Content, GraphicsDevice.Viewport);
+            _mapData = new MapData(Content, GraphicsDevice.Viewport);
+            PlayerMovement.Initialize(_playerOne, _mapData);
             ShotManager.Initialize(Content, GraphicsDevice.Viewport);
         }
 
@@ -73,7 +76,7 @@ namespace MustSaveEarth {
 
             ShotManager.Update(gameTime);
             _playerOne.Update(gameTime);
-
+            _mapData.Update(gameTime, GraphicsDevice.Viewport);
             base.Update(gameTime);
         }
 
@@ -87,6 +90,7 @@ namespace MustSaveEarth {
             spriteBatch.Begin();
             spriteBatch.Draw(_background, new Rectangle(0, 0, _background.Width, _background.Height), Color.White);
             ShotManager.Draw(spriteBatch);
+            _mapData.Draw(spriteBatch);
             _playerOne.Draw(spriteBatch);
             spriteBatch.End();
 

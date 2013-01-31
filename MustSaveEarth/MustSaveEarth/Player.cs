@@ -15,7 +15,7 @@ namespace MustSaveEarth {
         private Viewport _view;
         private Vector2 _velocity;
         private Vector2 _position;
-        private Rectangle _rectangleHitBox;
+        private Rectangle _initialFrame;
         private float _maxSpeed = 5f;
 
         public Player(ContentManager content, Viewport view) {
@@ -26,7 +26,7 @@ namespace MustSaveEarth {
 
             _velocity = Vector2.Zero;
             _position = new Vector2(300, 200);
-            _rectangleHitBox = new Rectangle(0, 0, Texture.Width, Texture.Height);
+            _initialFrame = new Rectangle(0, 0, Texture.Width, Texture.Height);
         }
 
 
@@ -40,24 +40,29 @@ namespace MustSaveEarth {
             HandleGamepadInput();
             HandleKeyboardInput();
 
-            _velocity *= _maxSpeed;
+            _velocity.X *= _maxSpeed;
 
             // add velocity to the current vector
             _position += _velocity;
 
 
 
-            // if theyre not on the bottom, drop them until they reach
-            if((_position.Y + Texture.Height) < (_view.TitleSafeArea.Bottom + 200))
-                _velocity.Y = 1;
-            else
-                _velocity.Y = 0;
+            //// if theyre not on the bottom, drop them until they reach
+            //if((_position.Y + Texture.Height) < (_view.TitleSafeArea.Bottom + 200))
+            //    _velocity.Y = 1;
+            //else
+            //    _velocity.Y = 0;
 
+
+            PlayerMovement.MovePlayerToMapYLocation();
 
 
             // clamp the player to the bounds of the viewing area
             _position.X = MathHelper.Clamp(_position.X, _view.TitleSafeArea.Left, _view.TitleSafeArea.Right - Texture.Width);
-            _position.Y = MathHelper.Clamp(_position.Y, _view.TitleSafeArea.Bottom - Texture.Height - 120, _view.TitleSafeArea.Top);
+            _position.Y = MathHelper.Clamp(_position.Y, _view.TitleSafeArea.Top,  _view.TitleSafeArea.Bottom - Texture.Height);
+
+
+
         }
 
 
@@ -112,7 +117,7 @@ namespace MustSaveEarth {
 
         public Rectangle RectangleHitBox {
             get {
-                return _rectangleHitBox;
+                return _initialFrame;
             }
         }
 
@@ -120,6 +125,16 @@ namespace MustSaveEarth {
         public Vector2 Position {
             get {
                 return _position;
+            }
+            set {
+                _position = value;
+            }
+        }
+
+
+        public Vector2 WorldPosition {
+            get {
+                return _position + RelativeCenter;
             }
         }
         #endregion
