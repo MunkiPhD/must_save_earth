@@ -50,7 +50,7 @@ namespace MustSaveEarth {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             _background = Content.Load<Texture2D>("Background_1");
-            _playerOne = new Player(Content, GraphicsDevice.Viewport);
+                         _playerOne = new Player(Content, GraphicsDevice.Viewport);
             _mapData = new MapData(Content, GraphicsDevice.Viewport);
             PlayerMovement.Initialize(_playerOne, _mapData);
             ShotManager.Initialize(Content, GraphicsDevice.Viewport);
