@@ -18,6 +18,7 @@ namespace MustSaveEarth {
         SpriteBatch spriteBatch;
         Player _playerOne;
         Texture2D _background; // refactor to own class
+        Texture2D _foreground;
         MapData _mapData;
 
         public Game1() {
@@ -50,9 +51,10 @@ namespace MustSaveEarth {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             _background = Content.Load<Texture2D>("Background_1");
-                         _playerOne = new Player(Content, GraphicsDevice.Viewport);
+            _foreground= Content.Load<Texture2D>("CanyonFore");
+            _playerOne = new Player(Content, GraphicsDevice.Viewport);
             _mapData = new MapData(Content, GraphicsDevice.Viewport);
-            PlayerMovement.Initialize(_playerOne, _mapData);
+            PlayerMovement.Initialize(_playerOne, _foreground);
             ShotManager.Initialize(Content, GraphicsDevice.Viewport);
         }
 
@@ -71,7 +73,7 @@ namespace MustSaveEarth {
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime) {
             // Allows the game to exit
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
+            if(GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
             ShotManager.Update(gameTime);
@@ -89,6 +91,7 @@ namespace MustSaveEarth {
 
             spriteBatch.Begin();
             spriteBatch.Draw(_background, new Rectangle(0, 0, _background.Width, _background.Height), Color.White);
+            spriteBatch.Draw(_foreground, new Rectangle(0, 0, _foreground.Width, _foreground.Height), Color.White);
             ShotManager.Draw(spriteBatch);
             _mapData.Draw(spriteBatch);
             _playerOne.Draw(spriteBatch);

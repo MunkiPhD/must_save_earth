@@ -18,6 +18,8 @@ namespace MustSaveEarth {
         private Rectangle _initialFrame;
         private float _maxSpeed = 5f;
 
+        public bool Floating = true;
+
         public Player(ContentManager content, Viewport view) {
             _content = content;
             _view = view;
@@ -47,11 +49,11 @@ namespace MustSaveEarth {
 
 
 
-            //// if theyre not on the bottom, drop them until they reach
-            //if((_position.Y + Texture.Height) < (_view.TitleSafeArea.Bottom + 200))
-            //    _velocity.Y = 1;
-            //else
-            //    _velocity.Y = 0;
+            // if theyre not on the bottom, drop them until they reach
+            if((_position.Y + Texture.Height) < (_view.TitleSafeArea.Bottom + 200))
+                _velocity.Y = 4;
+            else
+                _velocity.Y = 0;
 
 
             PlayerMovement.MovePlayerToMapYLocation();

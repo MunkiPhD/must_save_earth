@@ -17,3 +17,4 @@ C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\obj\x86\Debug\M
 C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\WeaponShots.xnb
 C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\SpriteFont1.xnb
 C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\Line.xnb
+C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\CanyonFore.xnb

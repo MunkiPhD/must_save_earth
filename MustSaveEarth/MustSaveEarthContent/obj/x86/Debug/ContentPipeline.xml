@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\Background_1.xnb</Output>
-      <Time>2013-01-30T09:59:06.949357-05:00</Time>
+      <Time>2013-02-01T12:58:46.0207355-05:00</Time>
     </Item>
     <Item>
       <Source>WeaponShots.png</Source>
@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\Line.xnb</Output>
-      <Time>2013-01-31T14:39:45.2731086-05:00</Time>
+      <Time>2013-01-31T16:38:32.1504047-05:00</Time>
     </Item>
     <Item>
       <Source>SpriteFont1.spritefont</Source>
@@ -45,6 +45,15 @@
       <Options>None</Options>
       <Output>C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\SpriteFont1.xnb</Output>
       <Time>2013-01-30T10:51:12.372121-05:00</Time>
+    </Item>
+    <Item>
+      <Source>CanyonFore.png</Source>
+      <Name>CanyonFore</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\CanyonFore.xnb</Output>
+      <Time>2013-02-01T12:58:09.8861906-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
