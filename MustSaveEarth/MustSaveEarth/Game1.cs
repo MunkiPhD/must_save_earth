@@ -20,6 +20,7 @@ namespace MustSaveEarth {
         Texture2D _background; // refactor to own class
         Texture2D _foreground;
         MapData _mapData;
+        EnemyManager _enemyManager;
 
         public Game1() {
             graphics = new GraphicsDeviceManager(this);
@@ -54,6 +55,7 @@ namespace MustSaveEarth {
             _foreground= Content.Load<Texture2D>("CanyonFore");
             _playerOne = new Player(Content, GraphicsDevice.Viewport);
             _mapData = new MapData(Content, GraphicsDevice.Viewport);
+            _enemyManager = new EnemyManager(Content, GraphicsDevice.Viewport);
             PlayerMovement.Initialize(_playerOne, _foreground);
             ShotManager.Initialize(Content, GraphicsDevice.Viewport);
         }
@@ -78,6 +80,7 @@ namespace MustSaveEarth {
 
             ShotManager.Update(gameTime);
             _playerOne.Update(gameTime);
+            _enemyManager.Update(gameTime);
             _mapData.Update(gameTime, GraphicsDevice.Viewport);
             base.Update(gameTime);
         }
@@ -93,6 +96,7 @@ namespace MustSaveEarth {
             spriteBatch.Draw(_background, new Rectangle(0, 0, _background.Width, _background.Height), Color.White);
             spriteBatch.Draw(_foreground, new Rectangle(0, 0, _foreground.Width, _foreground.Height), Color.White);
             ShotManager.Draw(spriteBatch);
+            _enemyManager.Draw(spriteBatch);
             _mapData.Draw(spriteBatch);
             _playerOne.Draw(spriteBatch);
             spriteBatch.End();

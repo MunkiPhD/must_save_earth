@@ -55,6 +55,24 @@
       <Output>C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\CanyonFore.xnb</Output>
       <Time>2013-02-01T12:58:09.8861906-05:00</Time>
     </Item>
+    <Item>
+      <Source>enemy_1.png</Source>
+      <Name>enemy_1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\enemy_1.xnb</Output>
+      <Time>2013-02-12T13:19:37.2993506-05:00</Time>
+    </Item>
+    <Item>
+      <Source>enemy_2.png</Source>
+      <Name>enemy_2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\enemy_2.xnb</Output>
+      <Time>2013-02-12T13:19:05.4035262-05:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
