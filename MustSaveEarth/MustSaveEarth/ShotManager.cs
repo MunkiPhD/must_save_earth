@@ -10,8 +10,8 @@ namespace MustSaveEarth {
     static class ShotManager {
         static public Texture2D Texture;
         static private Rectangle _defaultShot;
-        static private Vector2 _defaultShotVector = new Vector2(0, -4f);
-        static private List<Particle> _shots = new List<Particle>();
+        static private Vector2 _defaultShotVector = new Vector2(0, -8f);
+        static public List<Particle> Shots = new List<Particle>();
         static private Viewport _view;
 
         static private float _timeSinceLastShot;
@@ -31,7 +31,7 @@ namespace MustSaveEarth {
         /// </summary>
         /// <param name="position"></param>
         public static void FireShot(Vector2 position){
-            _shots.Add(new Particle(Texture, _defaultShot, position, _defaultShotVector));
+            Shots.Add(new Particle(Texture, _defaultShot, position, _defaultShotVector));
         }
 
 
@@ -59,19 +59,19 @@ namespace MustSaveEarth {
             _timeSinceLastShot += (float)gameTime.ElapsedGameTime.TotalSeconds;
 
 
-            for(int i = 0; i < _shots.Count ; i++) {
-                if(_shots[i].isActive) {
-                    _shots[i].Update(gameTime);
+            for(int i = 0; i < Shots.Count ; i++) {
+                if(Shots[i].isActive) {
+                    Shots[i].Update(gameTime);
 
 
                     // check to see if it's still in the viewable area
-                    if(_view.TitleSafeArea.Intersects(_shots[i].PositionRectangle))
-                        _shots[i].isActive = true;
+                    if(_view.TitleSafeArea.Intersects(Shots[i].PositionRectangle))
+                        Shots[i].isActive = true;
                     else
-                        _shots[i].isActive = false;
+                        Shots[i].isActive = false;
 
                 } else {
-                    _shots.RemoveAt(i);
+                    Shots.RemoveAt(i);
                 }
             }
         }
@@ -83,11 +83,11 @@ namespace MustSaveEarth {
         /// </summary>
         /// <param name="spriteBatch"></param>
         public static void Draw(SpriteBatch spriteBatch) {
-            foreach(Particle particle in _shots) {
+            foreach(Particle particle in Shots) {
                 if(particle.isActive)
                     particle.Draw(spriteBatch);
             }
-            spriteBatch.DrawString(_spriteFont, "Shot Count:" + _shots.Count.ToString(), new Vector2(10, 10), Color.White);
+            spriteBatch.DrawString(_spriteFont, "Shot Count:" + Shots.Count.ToString(), new Vector2(10, 10), Color.White);
         }
     }
 }

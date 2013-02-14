@@ -58,6 +58,7 @@ namespace MustSaveEarth {
             _enemyManager = new EnemyManager(Content, GraphicsDevice.Viewport);
             PlayerMovement.Initialize(_playerOne, _foreground);
             ShotManager.Initialize(Content, GraphicsDevice.Viewport);
+            CollisionManager.Initialize(_enemyManager);
         }
 
         /// <summary>
@@ -79,6 +80,8 @@ namespace MustSaveEarth {
                 this.Exit();
 
             ShotManager.Update(gameTime);
+            CollisionManager.Update(gameTime);
+
             _playerOne.Update(gameTime);
             _enemyManager.Update(gameTime);
             _mapData.Update(gameTime, GraphicsDevice.Viewport);

@@ -37,10 +37,10 @@ namespace MustSaveEarth {
             }
 
             for(int i = 0; i < EnemyList.Count; i++) {
-                if(EnemyList[i].Position.Y > _view.TitleSafeArea.Height)
-                    EnemyList.RemoveAt(i);
-
                 EnemyList[i].Update(gameTime); // remove it from the game world
+
+                if((EnemyList[i].Position.Y > _view.TitleSafeArea.Height) || (EnemyList[i].isActive == false))
+                    EnemyList.RemoveAt(i);
             }
 
         }

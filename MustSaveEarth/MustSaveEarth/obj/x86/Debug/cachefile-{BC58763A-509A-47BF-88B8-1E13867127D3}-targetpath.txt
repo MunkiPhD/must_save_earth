@@ -2,7 +2,7 @@ Content\PlayerTank1.xnb
 Content\Background_1.xnb
 Content\WeaponShots.xnb
 Content\Line.xnb
-Content\SpriteFont1.xnb
 Content\CanyonFore.xnb
 Content\enemy_1.xnb
 Content\enemy_2.xnb
+Content\SpriteFont1.xnb

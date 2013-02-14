@@ -20,3 +20,9 @@ C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\C
 C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\CanyonFore.xnb
 C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\enemy_1.xnb
 C:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\enemy_2.xnb
+E:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\WeaponShots.xnb
+E:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\Line.xnb
+E:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\CanyonFore.xnb
+E:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\enemy_1.xnb
+E:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\enemy_2.xnb
+E:\development\games\must_save_earth\MustSaveEarth\MustSaveEarth\bin\x86\Debug\Content\SpriteFont1.xnb
