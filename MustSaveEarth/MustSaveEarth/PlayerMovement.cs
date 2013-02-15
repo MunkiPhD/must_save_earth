@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace MustSaveEarth {
     static class PlayerMovement {
-        public static Player PlayerOne;
+       
         public static MapData CurrentMapData;
         public static Texture2D LevelTexture;
         private static Rectangle _levelRect;
@@ -19,8 +19,8 @@ namespace MustSaveEarth {
         /// </summary>
         /// <param name="player"></param>
         /// <param name="currentMap"></param>
-        public static void Initialize(Player player, Texture2D background) {
-            PlayerOne = player;
+        public static void Initialize(Texture2D background) {
+           
             //CurrentMapData = currentMap;
 
             LevelTexture = background;
@@ -28,8 +28,8 @@ namespace MustSaveEarth {
             _levelData = new Color[LevelTexture.Width * LevelTexture.Height];
             background.GetData(_levelData);
 
-            _playerData = new Color[PlayerOne.Texture.Width * PlayerOne.Texture.Height];
-            PlayerOne.Texture.GetData(_playerData);
+            _playerData = new Color[Player.Texture.Width * Player.Texture.Height];
+            Player.Texture.GetData(_playerData);
 
         }
 
@@ -38,9 +38,9 @@ namespace MustSaveEarth {
         /// 
         /// </summary>
         public static void MovePlayerToMapYLocation() {
-            if(IntersectPixels(PlayerOne.RectangleHitBox, _playerData, _levelRect, _levelData)) {
-                while(IntersectPixels(PlayerOne.RectangleHitBox, _playerData, _levelRect, _levelData)){
-                    PlayerOne.Position = new Vector2(PlayerOne.Position.X, PlayerOne.Position.Y -1);
+            if (IntersectPixels(Player.RectangleHitBox, _playerData, _levelRect, _levelData)) {
+                while (IntersectPixels(Player.RectangleHitBox, _playerData, _levelRect, _levelData)) {
+                    Player.Position = new Vector2(Player.Position.X, Player.Position.Y - 1);
                 }
             }
             //foreach(MapLedge ledge in CurrentMapData.MapLedges) {

@@ -12,16 +12,18 @@ namespace MustSaveEarth {
         public Vector2 Movement = new Vector2(0, 1);
         public int HitPoints;
         public float MaxSpeed = 45f;
+        public int PointValue = 5;
         private Rectangle _hitBox;
         public bool isActive = true;
         private float _lastTimeHit = 0f;
         private bool _drawAsHit = false;
 
-        public Enemy(Texture2D texture, Rectangle initialFrame, Vector2 initialPosition) {
+        public Enemy(Texture2D texture, Rectangle initialFrame, Vector2 initialPosition, int hitPoints, int pointValue) {
             Position = initialPosition;
             this.SpriteTexture = texture;
             _hitBox = new Rectangle(0, 0, texture.Width, texture.Height); //for the time being all the textures are the stand alone sprite
-            HitPoints = 20; // set a default hitpoints
+            this.HitPoints = hitPoints; // set a default hitpoints
+            this.PointValue = pointValue;
         }
 
 
@@ -33,8 +35,10 @@ namespace MustSaveEarth {
             float elapsedTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
             Position += elapsedTime * MaxSpeed * Movement;
 
-            if (HitPoints <= 0)
+            if (HitPoints <= 0) {
                 isActive = false;
+                Player.AddScore(this.PointValue);
+            }
 
 
             if (elapsedTime >= _lastTimeHit) {

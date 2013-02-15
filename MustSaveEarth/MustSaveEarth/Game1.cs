@@ -16,7 +16,6 @@ namespace MustSaveEarth {
     public class Game1 : Microsoft.Xna.Framework.Game {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        Player _playerOne;
         Texture2D _background; // refactor to own class
         Texture2D _foreground;
         MapData _mapData;
@@ -52,11 +51,12 @@ namespace MustSaveEarth {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             _background = Content.Load<Texture2D>("Background_1");
-            _foreground= Content.Load<Texture2D>("CanyonFore");
-            _playerOne = new Player(Content, GraphicsDevice.Viewport);
+            _foreground = Content.Load<Texture2D>("CanyonFore");
+
             _mapData = new MapData(Content, GraphicsDevice.Viewport);
             _enemyManager = new EnemyManager(Content, GraphicsDevice.Viewport);
-            PlayerMovement.Initialize(_playerOne, _foreground);
+            Player.Initialize(Content, GraphicsDevice.Viewport);
+            PlayerMovement.Initialize(_foreground);
             ShotManager.Initialize(Content, GraphicsDevice.Viewport);
             CollisionManager.Initialize(_enemyManager);
         }
@@ -76,13 +76,13 @@ namespace MustSaveEarth {
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime) {
             // Allows the game to exit
-            if(GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
             ShotManager.Update(gameTime);
             CollisionManager.Update(gameTime);
 
-            _playerOne.Update(gameTime);
+            Player.Update(gameTime);
             _enemyManager.Update(gameTime);
             _mapData.Update(gameTime, GraphicsDevice.Viewport);
             base.Update(gameTime);
@@ -101,7 +101,7 @@ namespace MustSaveEarth {
             ShotManager.Draw(spriteBatch);
             _enemyManager.Draw(spriteBatch);
             _mapData.Draw(spriteBatch);
-            _playerOne.Draw(spriteBatch);
+            Player.Draw(spriteBatch);
             spriteBatch.End();
 
             base.Draw(gameTime);

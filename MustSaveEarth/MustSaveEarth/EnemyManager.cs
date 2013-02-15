@@ -57,12 +57,16 @@ namespace MustSaveEarth {
         }
 
 
+
+        /// <summary>
+        /// Adds an enemy to the game
+        /// </summary>
         private void AddEnemy() {
             int xLocation = _rand.Next(0, _view.TitleSafeArea.Width - _baseTexture.Width);
             if(xLocation % 2 == 0)
-                EnemyList.Add(new Enemy(_baseTexture, new Rectangle(0, 0, 0, 0), new Vector2(xLocation,-_baseTexture.Height)));
+                EnemyList.Add(new Enemy(_baseTexture, new Rectangle(0, 0, 0, 0), new Vector2(xLocation,-_baseTexture.Height),10, 5));
             else
-                EnemyList.Add(new Enemy(_baseTexture2, new Rectangle(0, 0, 0, 0), new Vector2(xLocation, -_baseTexture2.Height)));
+                EnemyList.Add(new Enemy(_baseTexture2, new Rectangle(0, 0, 0, 0), new Vector2(xLocation, -_baseTexture2.Height), 20, 10));
         }
     }
 }
